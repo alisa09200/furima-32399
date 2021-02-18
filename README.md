@@ -26,11 +26,11 @@
 | -------------- | -------- | ----------------------------- |
 | product        | string   | null: false                   |
 | explanation    | text     | null: false                   |
-| category_id    | string   | null: false                   |
-| condition_id   | string   | null: false                   |
-| postage_id     | string   | null: false                   |
-| area_id        | string   | null: false                   |
-| period_id      | string   | null: false                   |
+| category_id    | integer  | null: false                   |
+| condition_id   | integer  | null: false                   |
+| postage_id     | integer  | null: false                   |
+| area_id        | integer  | null: false                   |
+| period_id      | integer  | null: false                   |
 | price          | integer  | null: false                   |
 | user           |references| null: false, foreign_key: true|
 
@@ -72,9 +72,6 @@
 
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
-| credit      | integer    | null: false                    |
-| expiration  | integer    | null: false                    |
-| security    | integer    | null: false                    |
 | postalcode  | integer    | null: false                    |
 | prefectures | string     | null: false                    |
 | city        | string     | null: false                    |
