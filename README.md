@@ -70,15 +70,15 @@
 
 ## addresses テーブル
 
-| Column      | Type       | Options                        |
-| ----------- | ---------- | ------------------------------ |
-| postalcode  | integer    | null: false                    |
-| prefectures | string     | null: false                    |
-| city        | string     | null: false                    |
-| block       | string     | null: false                    |
-| building    | string     |                                |
-| phone       | integer    | null: false                    |
-| purchase    | references | null: false, foreign_key: true |
+| Column        | Type       | Options                      |
+| ------------- | ---------- | ---------------------------- |
+| postalcode    | string     | null: false                  |
+| prefectures_id| integer    | null: false                  |
+| city          | string     | null: false                  |
+| block         | string     | null: false                  |
+| building      | string     |                              |
+| phone         | integer    | null: false                  |
+| purchase      | references | null: false, foreign_key:true|
 
 ### Association
 
