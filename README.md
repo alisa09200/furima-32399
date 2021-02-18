@@ -77,7 +77,7 @@
 | city          | string     | null: false                  |
 | block         | string     | null: false                  |
 | building      | string     |                              |
-| phone         | integer    | null: false                  |
+| phone         | string     | null: false                  |
 | purchase      | references | null: false, foreign_key:true|
 
 ### Association
