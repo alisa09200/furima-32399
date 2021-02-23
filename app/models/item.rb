@@ -7,4 +7,5 @@ class Item < ApplicationRecord
   has_many :condition
   has_many :periods
   has_many :postage
+  has_one_attached :image
 end
