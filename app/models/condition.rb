@@ -10,7 +10,7 @@ class Condition < ActiveHash::Base
     { id: 8, name: 'その他' },
   ]
 
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :item  
+  include ActiveHash::Associations
+  has_many :items 
 
   end

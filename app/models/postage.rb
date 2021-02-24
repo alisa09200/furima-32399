@@ -5,7 +5,7 @@ class Postage < ActiveHash::Base
     { id: 3, name: '送料込み(出品者負担)' },
   ]
 
-  extend ActiveHash::Associations::ActiveRecordExtensions
-  belongs_to :item  
+  include ActiveHash::Associations
+  has_many :items
 
   end
