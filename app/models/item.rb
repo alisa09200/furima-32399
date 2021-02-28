@@ -23,5 +23,5 @@ class Item < ApplicationRecord
     validates :period_id
   end
 
-  validates :price, format: { with: /\A[0-9]+\z/}, numericality: { greater_than: 300, less_than_or_equel_to: 9999999 }
+  validates :price, format: { with: /\A[0-9]+\z/ }, numericality: { greater_than: 300, less_than_or_equel_to: 9_999_999 }
 end
