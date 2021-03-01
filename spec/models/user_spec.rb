@@ -40,13 +40,13 @@ RSpec.describe User, type: :model do
       it 'last_nameが半角では登録できないこと' do
         @user.last_name = 'aaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name is invalid")
+        expect(@user.errors.full_messages).to include('Last name is invalid')
       end
 
       it 'first_nameが半角では登録できないこと' do
         @user.first_name = 'aaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name is invalid")
+        expect(@user.errors.full_messages).to include('First name is invalid')
       end
 
       it 'last_name_kanaが空では登録できないこと' do
@@ -64,13 +64,13 @@ RSpec.describe User, type: :model do
       it 'last_name_kanaが半角では登録できないこと' do
         @user.last_name_kana = 'aaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Last name kana is invalid")
+        expect(@user.errors.full_messages).to include('Last name kana is invalid')
       end
 
       it 'first_name_kanaが半角では登録できないこと' do
         @user.first_name_kana = 'aaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("First name kana is invalid")
+        expect(@user.errors.full_messages).to include('First name kana is invalid')
       end
 
       it 'birthdayが空では登録できないこと' do
@@ -102,14 +102,14 @@ RSpec.describe User, type: :model do
         @user.password = '111111'
         @user.password_confirmation = '111111'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is invalid", "Password confirmation is invalid")
+        expect(@user.errors.full_messages).to include('Password is invalid', 'Password confirmation is invalid')
       end
 
       it 'passwordがローマ字だけでは登録できないこと' do
         @user.password = 'aaaaaa'
         @user.password_confirmation = 'aaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is invalid", "Password confirmation is invalid")
+        expect(@user.errors.full_messages).to include('Password is invalid', 'Password confirmation is invalid')
       end
 
       it 'passwordとpassword_confirmationが不一致では登録できないこと' do
@@ -123,13 +123,13 @@ RSpec.describe User, type: :model do
         @user.save
         another_user = FactoryBot.build(:user, email: @user.email)
         another_user.valid?
-        expect(another_user.errors.full_messages).to include("Email has already been taken")
+        expect(another_user.errors.full_messages).to include('Email has already been taken')
       end
 
       it 'emailに@が含まれていないと登録できないこと' do
         @user.email = 'aaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
     end
   end
