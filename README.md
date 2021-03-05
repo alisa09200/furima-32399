@@ -73,7 +73,7 @@
 | Column        | Type       | Options                      |
 | ------------- | ---------- | ---------------------------- |
 | postalcode    | string     | null: false                  |
-| prefectures_id| integer    | null: false                  |
+| area_id       | integer    | null: false                  |
 | city          | string     | null: false                  |
 | block         | string     | null: false                  |
 | building      | string     |                              |
