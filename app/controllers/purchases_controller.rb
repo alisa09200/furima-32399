@@ -1,7 +1,10 @@
 class PurchasesController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     @purchase_address = PurchaseAddress.new
     @item = Item.find(params[:item_id])
+    redirect_to root_path if current_user.id == @item.user.id
   end
 
   def create
@@ -30,5 +33,4 @@ class PurchasesController < ApplicationController
       currency: 'jpy'
     )
   end
-
 end
