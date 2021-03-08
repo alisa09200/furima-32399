@@ -7,7 +7,7 @@ class PurchaseAddress
     validates :city
     validates :block
     validates :building
-    validates :phone, format: { with: /\d{,11}/ }
+    validates :phone, numericality: { only_integer: true }, format: { with: /\A\d{,11}\z/ }
   end
 
   validates :area_id, numericality: { other_than: 1 }
