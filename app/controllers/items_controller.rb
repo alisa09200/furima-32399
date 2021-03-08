@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.order(id: "DESC")
+    @purchases = Purchase.all
   end
 
   def new
@@ -21,9 +22,16 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @purchases = Purchase.all
   end
 
   def edit
+    @purchases = Purchase.all
+    @purchases.each do |purchase|
+      if @item.id == purchase.item.id
+        redirect_to root_path
+      end
+    end
   end
 
   def update

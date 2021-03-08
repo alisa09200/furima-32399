@@ -9,7 +9,11 @@
       <%= image_tag @item.image ,class:"item-box-img" %>
       
       <div class="sold-out">
-        <!--<span>Sold Out!!</span>-->
+        <% @purchases.each do |purchase| %>
+          <% if @item.id == purchase.item.id %>
+            <span>Sold Out!!</span>
+          <% end %>
+        <% end %>
       </div>
 
     </div>
