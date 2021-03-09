@@ -1,10 +1,10 @@
 class PurchasesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_item, only: [:index, :create]
+  before_action :contributor_confirmation, only: [:index, :create] 
 
   def index
     @purchase_address = PurchaseAddress.new
-    redirect_to root_path if current_user.id == @item.user.id || @item.purchase != nil 
   end
 
   def create
@@ -26,6 +26,10 @@ class PurchasesController < ApplicationController
 
   def set_item
     @item = Item.find(params[:item_id])
+  end
+
+  def contributor_confirmation
+    redirect_to root_path if current_user.id == @item.user.id || @item.purchase != nil
   end
 
   def pay_item
