@@ -8,6 +8,8 @@ class PurchaseAddress
     validates :block
     validates :phone, numericality: { only_integer: true }, format: { with: /\A\d{,11}\z/ }
     validates :token
+    validates :item_id
+    validates :user_id
   end
 
   validates :area_id, numericality: { other_than: 1 }
