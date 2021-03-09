@@ -6,7 +6,7 @@ class PurchaseAddress
     validates :postalcode, format: { with: /\A\d{3}[-]\d{4}\z/ }
     validates :city
     validates :block
-    validates :phone, numericality: { only_integer: true }, format: { with: /\A\d{,11}\z/ }
+    validates :phone, format: { with: /\A\d{,11}\z/ }
     validates :token
     validates :item_id
     validates :user_id
