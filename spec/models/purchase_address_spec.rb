@@ -52,7 +52,7 @@ RSpec.describe PurchaseAddress, type: :model do
       it 'phoneにハイフンがあると保存できないこと' do
         @purchase_address.phone = '111-1111'
         @purchase_address.valid?
-        expect(@purchase_address.errors.full_messages).to include("Phone is not a number")
+        expect(@purchase_address.errors.full_messages).to include("Phone is invalid")
       end
       it 'phoneが12桁以上だと保存できないこと' do
         @purchase_address.phone = '123456789012'
