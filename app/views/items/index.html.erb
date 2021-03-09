@@ -124,11 +124,9 @@
           <%= image_tag item.image, class: "item-img" %>
 
           <div class='sold-out'>
-            <% @purchases.each do |purchase| %>
-              <% if item.id == purchase.item.id %>
+              <% if item.purchase != nil %>
                 <span>Sold Out!!</span>
               <% end %>
-            <% end %>
           </div>
 
         </div>
