@@ -1,3 +1,4 @@
+if (document.URL.match( /new/ )) {
 function calculation (){
   const itemPrice = document.getElementById("item-price");
   itemPrice.addEventListener("keyup", () => {
@@ -11,3 +12,4 @@ function calculation (){
 }
 
 window.addEventListener('load', calculation);
+}
