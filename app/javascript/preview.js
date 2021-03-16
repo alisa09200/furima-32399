@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     const blobImage = document.createElement('img');
     blobImage.setAttribute('src', blob);
+    blobImage.setAttribute('id', 'images');
 
     const inputHTML = document.createElement('input')
     inputHTML.setAttribute('id', `item_image_${imageElementNum}`)
