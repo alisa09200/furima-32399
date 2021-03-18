@@ -68,6 +68,7 @@
 - belongs_to :user
 
 
+
 ## addresses テーブル
 
 | Column        | Type       | Options                      |
