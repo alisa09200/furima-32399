@@ -36,6 +36,49 @@
        <div class="FormField__email">
          <%= f.email_field :email %>
        </div>
+      <div class="FormField">
+       <div class="FormField__password">
+         <%= f.label :password %>
+       </div>
+       <div class="FormField__password">
+         <%= f.text_field :password %>
+       </div>
+       <div class="FormField">
+       <div class="FormField__last_name">
+         <%= f.label :last_name %>
+       </div>
+       <div class="FormField__last_name">
+         <%= f.text_field :last_name %>
+       </div>
+       <div class="FormField">
+       <div class="FormField__first_name">
+         <%= f.label :first_name %>
+       </div>
+       <div class="FormField__first_name">
+         <%= f.text_field :first_name %>
+       </div>
+       <div class="FormField">
+       <div class="FormField__last_name_kana">
+         <%= f.label :last_name_kana %>
+       </div>
+       <div class="FormField__last_name_kana">
+         <%= f.text_field :last_name_kana %>
+       </div>
+       <div class="FormField">
+       <div class="FormField__first_name_kana">
+         <%= f.label :first_name_kana %>
+       </div>
+       <div class="FormField__first_name_kana">
+         <%= f.text_field :first_name_kana %>
+       </div>
+       <div class="FormField">
+       <div class="FormField__birthday">
+         <%= f.label :birthday %>
+       </div>
+       <div class="FormField__birthday">
+         <%= f.text_field :birthday %>
+       </div>
+     </div>
        <br>
      </div>
      <%= f.submit "更新する" %>
@@ -43,6 +86,6 @@
    <br>
    <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
    <br>
-   <%= link_to "商品一覧へ戻る", root_path%>
+   <%= link_to "トップページへ戻る", root_path%>
  </div>
 </div>

@@ -4,6 +4,7 @@ class PurchasesController < ApplicationController
   before_action :contributor_confirmation, only: [:index, :create] 
 
   def index
+    redirect_to new_card_path and return unless current_user.card.present?
     @purchase_address = PurchaseAddress.new
   end
 
