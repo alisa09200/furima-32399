@@ -7,7 +7,6 @@ class PurchaseAddress
     validates :city
     validates :block
     validates :phone, format: { with: /\A\d{,11}\z/ }
-    validates :token
     validates :item_id
     validates :user_id
   end
