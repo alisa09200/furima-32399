@@ -9,6 +9,7 @@ require("channels")
 require("../calculation")
 require("../card")
 require('../preview')
+require("../cardrg")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

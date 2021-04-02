@@ -4,6 +4,7 @@ class PurchasesController < ApplicationController
   before_action :contributor_confirmation, only: [:index, :create] 
 
   def index
+    redirect_to new_card_path and return unless current_user.card.present?
     @purchase_address = PurchaseAddress.new
   end
 
@@ -21,7 +22,7 @@ class PurchasesController < ApplicationController
   private
 
   def purchase_params
-    params.require(:purchase_address).permit(:postalcode, :area_id, :city, :block, :building, :phone,).merge(user_id: current_user.id, item_id: @item.id, token: params[:token])
+    params.require(:purchase_address).permit(:postalcode, :area_id, :city, :block, :building, :phone,).merge(user_id: current_user.id, item_id: @item.id)
   end
 
   def set_item
@@ -36,7 +37,7 @@ class PurchasesController < ApplicationController
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
     Payjp::Charge.create(
       amount: @item.price,
-      card: purchase_params[:token],
+      customer: current_user.card.customer_token,
       currency: 'jpy'
     )
   end
