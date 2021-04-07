@@ -8,6 +8,7 @@ class Item < ApplicationRecord
   belongs_to :condition
   belongs_to :period
   belongs_to :postage
+  has_many :comments
 
   with_options presence: true do
     validates :images
