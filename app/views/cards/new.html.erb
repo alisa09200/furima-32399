@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
-<%= form_with  url: cards_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
 <div class='credit-card-form'>
+<%= form_with  url: cards_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
   <div class='form-group'>
     <label class="form-text"><クレジットカード情報入力></label>
     <label class="form-text">ご購入前にご登録ください</label>
@@ -43,4 +43,5 @@
     <%= f.submit "登録する" ,class:"buy-red-btn" %>
   </div>
 <% end %>
+</div>
 <%= render "shared/second-footer"%>
