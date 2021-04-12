@@ -1,0 +1,93 @@
+.items-sell-contents {
+  background-color: #f5f5f5;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.items-sell-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.items-sell-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 10vh 15vw;
+}
+
+.AccountPage__title {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.Card__title {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.Card_info {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.Account__info {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__name {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__email {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__password {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__last_name {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__first_name {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__last_name_kana {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__first_name_kana {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.FormField__birthday {
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+}
