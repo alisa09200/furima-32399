@@ -1,4 +1,7 @@
-<%= render "shared/header" %>
+<div class="items-sell-contents">
+  <header class="items-sell-header">
+    <%= link_to image_tag('furima-logo-color.png' , size: '185x50'), "/" %>
+  </header>
 
 <div class='credit-card-form'>
 <%= form_with  url: cards_path, id: 'charge-form', class: 'card-form',local: true do |f| %>
@@ -43,5 +46,6 @@
     <%= f.submit "登録する" ,class:"buy-red-btn" %>
   </div>
 <% end %>
+</div>
 </div>
 <%= render "shared/second-footer"%>
