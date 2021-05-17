@@ -29,4 +29,10 @@ class User < ApplicationRecord
 
   validates :password, format: { with: /(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{6,}/}
 
+  def self.guest
+    find_or_create_by(email: "test@com") do |user|
+      user.password = Rails.application.secrets.test_account_pass
+    end
+  end
+
 end
